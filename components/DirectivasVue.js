@@ -12,6 +12,8 @@ Vue.component('directivas-vue', {
             <DirectivaIf/>
             <hr>
             <DirectivaFor/>
+            <hr>
+            <DirectivaOn/>
         </div>
     `,
     data() {
@@ -30,6 +32,7 @@ Vue.component('directivas-vue', {
         DirectivaHTML,
         DirectivaShow,
         DirectivaIf,
-        DirectivaFor
+        DirectivaFor,
+        DirectivaOn
     }
 });
