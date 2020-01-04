@@ -12,7 +12,7 @@ let DirectivaOn = {
             <p>-----------------------</p>
             <input type="text" @keydown="llamado" />
             <p>-----------------------</p>
-            <h1>Modificando Vista y Modelo</h1>
+            <h3>Modificando Vista y Modelo</h3>
             <input :value="textImput" type="text" @keyup="llamadoInput"/>
         </div>
     `,
