@@ -1,6 +1,6 @@
 let DirectivaOn = {
     template: `
-        <div @click="llamado">
+        <div>
             <h3 v-text="titulo"></h3>
             <p v-html="mensaje"></p>
             <button v-on:click.stop="llamado">Click Aqui</button>
@@ -11,6 +11,9 @@ let DirectivaOn = {
             <p>Entradas disponibles: <span v-text="entradas"></span></p>
             <p>-----------------------</p>
             <input type="text" @keydown="llamado" />
+            <p>-----------------------</p>
+            <h1>Modificando Vista y Modelo</h1>
+            <input :value="textImput" type="text" @keyup="llamadoInput"/>
         </div>
     `,
     data() {
@@ -19,7 +22,8 @@ let DirectivaOn = {
             mensaje: '<em>Usando Directiva v-on</em>',
             mensaje2: 'MENSAJE DESDE DATA',
             pelicula: 'El Padrino',
-            entradas: 5
+            entradas: 5,
+            textImput: "mensaje desde input text"
         }
     },
     methods: {
@@ -35,6 +39,9 @@ let DirectivaOn = {
                 return alert(`Entrada comprada para ${this.pelicula}`)
             }
             return alert('Ya no hay entredas')
+        },
+        llamadoInput(event){
+            this.textImput = event.target.value
         }
     }
 }
