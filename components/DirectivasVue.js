@@ -18,6 +18,8 @@ Vue.component('directivas-vue', {
             <DirectivaModel/>
             <hr>
             <DirectivaSlot/>
+            <hr>
+            <DirectivaPre/>
         </div>
     `,
     data() {
@@ -39,6 +41,7 @@ Vue.component('directivas-vue', {
         DirectivaFor,
         DirectivaOn,
         DirectivaModel,
-        DirectivaSlot
+        DirectivaSlot,
+        DirectivaPre
     }
 });
