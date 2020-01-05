@@ -14,6 +14,11 @@ let DirectivaModel = {
                 <input :name="index" :value="item" type="checkbox" v-model="favoritas"/>
                 {{item}}
             </label>
+            <p>--------------------</p>
+            <h4 v-show="favoritas.length > 0">Peliculas Favoritas</h4>
+            <ul>
+                <li v-for="(item2,index2) in favoritas" :key="index2" v-text="item2"></li>
+            </ul>
         </div>
     `,
     data() {
