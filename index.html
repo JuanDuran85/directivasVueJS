@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
+        <p v-cloak>{{titulo}}</p>
         <saludo-componente></saludo-componente>
         <hr>
         <directivas-vue></directivas-vue>
@@ -27,7 +33,12 @@
     <script>
         //creando una instancia de Vue por CDN
         let vm = new Vue({
-            el: '#app'
+            el: '#app',
+            data() {
+                return {
+                    titulo: 'Directiva v-cloak en VueJS'
+                }
+            },
         })
     </script>
 </body>
